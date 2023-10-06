@@ -4,5 +4,7 @@ This is an os created entirely by AI (shocker) currently it is very basic, but i
 This was compiled by running these commands on linux (in the location the source files are):
 
 nasm -f bin -o bootloader.bin bootloader.asm
+
 dd if=/dev/zero of=bootable.img bs=512 count=2880
+
 dd if=bootloader.bin of=bootable.img conv=notrunc
